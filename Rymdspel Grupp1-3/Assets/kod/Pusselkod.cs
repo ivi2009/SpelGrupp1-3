@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public class Pussel1kod : MonoBehaviour
+public class Pusselkod : MonoBehaviour
 {
     public TMP_InputField codeInput;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,11 +21,18 @@ public class Pussel1kod : MonoBehaviour
         if ((codeInput.text).ToLower() == rightCode)
         {
             Debug.Log("rätt");
+            gameObject.SetActive(false);
         }
         else
         {
             Debug.Log("fel");
+            GameStuff.lives--;
         }
         //är koden korekt?
+    }
+
+    public void CloseCanvas()
+    {
+        gameObject.SetActive(false);
     }
 }
