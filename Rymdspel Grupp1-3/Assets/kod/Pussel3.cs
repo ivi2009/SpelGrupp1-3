@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class ScreenChange : MonoBehaviour
+public class Pussel3 : MonoBehaviour
 {
-    int channel = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,6 +10,11 @@ public class ScreenChange : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    public void ÄndraSkärm1()
     {
 
     }
