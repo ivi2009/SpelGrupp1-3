@@ -14,7 +14,7 @@ public class Pusselkod : MonoBehaviour
         codes.AddRange(new List<string>
         {
             "12345",
-            "abcde",
+            "moves",
             "00000"
         });
     }
