@@ -5,6 +5,9 @@ public class GameStuff : MonoBehaviour
 {
     public TextMeshProUGUI livesGUI;
     public static int lives = 5;
+    public static bool puzzle0Done = false;
+    public static bool puzzle1Done = false;
+    public static bool puzzle2Done = false;
     int maxlives = 5;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,8 +26,19 @@ public class GameStuff : MonoBehaviour
         }
     }
 
-    public void OpenPuzzle(GameObject puzzle)
+    public void Open0puzzle(GameObject puzzle)
     {
-        puzzle.SetActive(!puzzle.activeSelf);
+        if (!puzzle0Done) puzzle.SetActive(!puzzle.activeSelf);
     }
+
+    public void Open1puzzle(GameObject puzzle)
+    {
+        if (!puzzle1Done) puzzle.SetActive(!puzzle.activeSelf);
+    }
+
+    public void Open2puzzle(GameObject puzzle)
+    {
+        if (!puzzle2Done) puzzle.SetActive(!puzzle.activeSelf);
+    }
+
 }
