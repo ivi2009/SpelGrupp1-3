@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 1167768179}
   - component: {fileID: 1167768178}
   m_Layer: 5
-  m_Name: Credits button
+  m_Name: Title screen button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
