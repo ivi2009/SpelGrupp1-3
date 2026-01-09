@@ -278,7 +278,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1019568469}
         m_TargetAssemblyTypeName: GameStuff, Assembly-CSharp
-        m_MethodName: OpenPuzzle
+        m_MethodName: Open1puzzle
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 541106530}
@@ -1150,7 +1150,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1019568469}
         m_TargetAssemblyTypeName: GameStuff, Assembly-CSharp
-        m_MethodName: OpenPuzzle
+        m_MethodName: Open0puzzle
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 879145318}
@@ -1401,9 +1401,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 879145323}
-        m_TargetAssemblyTypeName: Pussel1kod, Assembly-CSharp
+        m_TargetAssemblyTypeName: Pusselkod, Assembly-CSharp
         m_MethodName: IsCodeCorect
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2124,13 +2124,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 541106531}
-        m_TargetAssemblyTypeName: Pussel1kod, Assembly-CSharp
+        m_TargetAssemblyTypeName: Pusselkod, Assembly-CSharp
         m_MethodName: IsCodeCorect
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 11121
           m_BoolArgument: 0
