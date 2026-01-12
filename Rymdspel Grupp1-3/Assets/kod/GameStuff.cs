@@ -4,24 +4,27 @@ using UnityEngine.SceneManagement;
 public class GameStuff : MonoBehaviour
 {
     public TextMeshProUGUI livesGUI;
-    public static int lives = 5;
+    public static float timer = 300;
     public static bool puzzle0Done = false;
     public static bool puzzle1Done = false;
     public static bool puzzle2Done = false;
-    int maxlives = 5;
     public GameObject folder;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        lives = maxlives;
+        timer = 300;
+        puzzle0Done = false;
+        puzzle1Done = false;
+        puzzle2Done = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        livesGUI.text = lives.ToString() + "/5 Lives";
-        if (lives <= 0)
+        livesGUI.text = Mathf.RoundToInt(timer).ToString();
+        timer -= Time.deltaTime;
+        if (timer <= 0)
         {
             SceneManager.LoadScene("Game Over");
         }

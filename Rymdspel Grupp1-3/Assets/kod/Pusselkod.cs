@@ -38,7 +38,7 @@ public class Pusselkod : MonoBehaviour
         else
         {
             Debug.Log("fel");
-            GameStuff.lives--;
+            GameStuff.timer -= 30f;
         }
         //är koden korekt?
     }
