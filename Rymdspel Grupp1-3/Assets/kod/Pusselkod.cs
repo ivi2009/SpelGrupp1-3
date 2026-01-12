@@ -15,7 +15,8 @@ public class Pusselkod : MonoBehaviour
         {
             "shine",
             "moves",
-            "00000"
+            "00000",
+            "plant"
         });
     }
 
@@ -27,20 +28,21 @@ public class Pusselkod : MonoBehaviour
 
     public void IsCodeCorect(int puzzleID)
     {
-        if (codeInput.text.ToLower() == codes[puzzleID])
+        if (codeInput.text.ToLower() == codes[puzzleID])  //är koden korekt?
         {
             Debug.Log("rätt");
             gameObject.SetActive(false);
             if (puzzleID == 0) GameStuff.puzzle0Done = true;
             if (puzzleID == 1) GameStuff.puzzle1Done = true;
             if (puzzleID == 2) GameStuff.puzzle2Done = true;
+            if (puzzleID == 3) GameStuff.puzzle3Done = true;
         }
         else
         {
             Debug.Log("fel");
             GameStuff.timer -= 30f;
+            GameStuff.damageFlash = true;
         }
-        //är koden korekt?
     }
 
     public void CloseCanvas()
