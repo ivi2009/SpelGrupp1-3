@@ -13,7 +13,7 @@ public class Pusselkod : MonoBehaviour
         codes.Clear();
         codes.AddRange(new List<string>
         {
-            "12345",
+            "shine",
             "moves",
             "00000"
         });
