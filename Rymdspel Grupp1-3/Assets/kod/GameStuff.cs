@@ -10,6 +10,7 @@ public class GameStuff : MonoBehaviour
     public static bool puzzle2Done = false;
     public GameObject folder;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +29,8 @@ public class GameStuff : MonoBehaviour
         {
             SceneManager.LoadScene("Game Over");
         }
+
+
     }
 
     public void Open0puzzle(GameObject puzzle)
