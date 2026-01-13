@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Pussel3 : MonoBehaviour
 {
     public TextMeshProUGUI tmp;
-    int kanal = 1;
+    int kanal = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
