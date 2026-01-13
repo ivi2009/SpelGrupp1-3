@@ -117,4 +117,9 @@ public class GameStuff : MonoBehaviour
     {
         folder.SetActive(!folder.activeSelf);
     }
+
+    public void OpenCanva(GameObject canva)
+    {
+        canva.SetActive(!canva.activeSelf);
+    }
 }
