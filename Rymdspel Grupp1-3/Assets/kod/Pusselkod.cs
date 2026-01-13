@@ -35,6 +35,7 @@ public class Pusselkod : MonoBehaviour
             if (puzzleID == 1) GameStuff.puzzle1Done = true;
             if (puzzleID == 2) GameStuff.puzzle2Done = true;
             if (puzzleID == 3) GameStuff.puzzle3Done = true;
+            GameStuff.correctFlash = true;
         }
         else
         {
