@@ -30,7 +30,6 @@ public class Pusselkod : MonoBehaviour
     {
         if (codeInput.text.ToLower() == codes[puzzleID])  //är koden korekt?
         {
-            Debug.Log("rätt");
             gameObject.SetActive(false);
             if (puzzleID == 0) GameStuff.puzzle0Done = true;
             if (puzzleID == 1) GameStuff.puzzle1Done = true;
@@ -39,7 +38,6 @@ public class Pusselkod : MonoBehaviour
         }
         else
         {
-            Debug.Log("fel");
             GameStuff.timer -= 30f;
             GameStuff.damageFlash = true;
         }
