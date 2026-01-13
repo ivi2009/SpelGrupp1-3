@@ -15,7 +15,7 @@ public class Pusselkod : MonoBehaviour
         {
             "shine",
             "moves",
-            "00000",
+            "41523",
             "plant"
         });
     }
