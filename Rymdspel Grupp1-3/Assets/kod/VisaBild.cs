@@ -33,4 +33,6 @@ public class VisaBild : MonoBehaviour
             papper2.SetActive(false);
         }
     }
+
+
 }
