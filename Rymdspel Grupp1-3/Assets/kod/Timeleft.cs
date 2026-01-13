@@ -7,7 +7,7 @@ public class Timeleft : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        timeLeft.text = "Time Left: " + GameStuff.timer;
+        timeLeft.text = "Time Left: " + Mathf.RoundToInt(GameStuff.timer);
     }
 
     // Update is called once per frame
