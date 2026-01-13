@@ -16,6 +16,11 @@ public class GameStuff : MonoBehaviour
     public static bool damageFlash = false;
     public static bool correctFlash = false;
 
+    public GameObject puzzle0overline;
+    public GameObject puzzle1overline;
+    public GameObject puzzle2overline;
+    public GameObject puzzle3overline;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +32,11 @@ public class GameStuff : MonoBehaviour
         puzzle3Done = false;
         damageFlash = false;
         correctFlash = false;
+
+        puzzle0overline.SetActive(false);
+        puzzle1overline.SetActive(false);
+        puzzle2overline.SetActive(false);
+        puzzle3overline.SetActive(false);
     }
 
     // Update is called once per frame
@@ -76,6 +86,11 @@ public class GameStuff : MonoBehaviour
             co.a -= 2f * Time.deltaTime; // minskar alpha
             correct.color = co;
         }
+
+        if (puzzle0Done) puzzle0overline.SetActive(true);
+        if (puzzle1Done) puzzle1overline.SetActive(true);
+        if (puzzle2Done) puzzle2overline.SetActive(true);
+        if (puzzle3Done) puzzle3overline.SetActive(true);
     }
 
     public void Open0puzzle(GameObject puzzle)
