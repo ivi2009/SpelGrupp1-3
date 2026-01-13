@@ -5313,7 +5313,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Objectives:\n- Log in on computer\n- Repair Motor\n- fix operating system\n-
-    Survive\n____________________\n 1 = Z\n ...\n 26 = A\n\n \n\n"
+    untangle wires\n- Survive\n____________________\n 1 = Z\n ...\n 26 = A\n\n \n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
   m_sharedMaterial: {fileID: 2341788086263780459, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
