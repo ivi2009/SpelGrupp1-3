@@ -1647,7 +1647,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The spaceship crashes in to a astroid,
+  m_text: The spaceship crashes in to an astroid,
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
   m_sharedMaterial: {fileID: 2341788086263780459, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
