@@ -6376,7 +6376,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n     .  . . -  . . - .          . - . .  - - -        - - .  - . . -           
+  m_text: "\n      . . . -  . . - .          . - . .  - - -        - - .  - . . -           
     . - . .  . . - - .  . - -  - . -"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
