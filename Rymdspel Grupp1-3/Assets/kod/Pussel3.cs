@@ -33,35 +33,35 @@ public class Pussel3 : MonoBehaviour
             cb.normalColor = Color.red;
             cb.selectedColor = Color.red;
             cb.highlightedColor = Color.red;
-            tmp.text = "1";
+            tmp.text = "6";
         }
         if (kanal == 2)
         {
             cb.normalColor = Color.blue;
             cb.selectedColor = Color.blue;
             cb.highlightedColor = Color.blue;
-            tmp.text = "2";
+            tmp.text = "20";
         }
         if (kanal == 3)
         {
             cb.normalColor = Color.pink;
             cb.selectedColor = Color.pink;
             cb.highlightedColor = Color.pink;
-            tmp.text = "3";
+            tmp.text = "22";
         }
         if (kanal == 4)
         {
             cb.normalColor = Color.yellow;
             cb.selectedColor = Color.yellow;
             cb.highlightedColor = Color.yellow;
-            tmp.text = "4";
+            tmp.text = "17";
         }
         if (kanal == 5)
         {
             cb.normalColor = Color.green;
             cb.selectedColor = Color.green;
             cb.highlightedColor = Color.green;
-            tmp.text = "5";
+            tmp.text = "23";
         }
         button.colors = cb;
     }
