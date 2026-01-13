@@ -37,6 +37,10 @@ public class GameStuff : MonoBehaviour
             SceneManager.LoadScene("Game Over");
         }
 
+        if (puzzle0Done && puzzle1Done && puzzle2Done && puzzle3Done)
+        {
+            SceneManager.LoadScene("Win screen");
+        }
         //damage
 
         Color c = damage.color;
