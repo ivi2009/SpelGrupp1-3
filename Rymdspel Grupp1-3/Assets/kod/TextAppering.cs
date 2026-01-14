@@ -15,7 +15,7 @@ public class TextAppering : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime / 3;
+        timer += Time.deltaTime / 2.5f;
 
         if (Mathf.RoundToInt(timer) <= text.Count)
         {
