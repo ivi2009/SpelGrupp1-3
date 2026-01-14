@@ -2463,9 +2463,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This is the operating system. It\u2019s old but still reliable. For some
-    reason, it uses more code that you\u2019ve forgotten how to read. You somehow
-    need to get it up and running."
+  m_text: "This is the computer, you forgot the password but it seems to be contained
+    in this poem. \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
   m_sharedMaterial: {fileID: 2341788086263780459, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
@@ -3176,9 +3175,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This is the operating system. It\u2019s old but still reliable. For some
-    reason, it uses more code that you\u2019ve forgotten how to read. You somehow
-    need to get it up and running."
+  m_text: "Welcome to the operating system it operates in morse code\u2026 but you
+    forgot how morse code works since hitting your head. There is a paper that shows
+    how to start it. \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
   m_sharedMaterial: {fileID: 2341788086263780459, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
@@ -8145,9 +8144,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This is the operating system. It\u2019s old but still reliable. For some
-    reason, it uses more code that you\u2019ve forgotten how to read. You somehow
-    need to get it up and running."
+  m_text: "The motor seems to be powered by satanic magic. To start it you need to
+    solve a riddle, there\u2019s a hint on a piece of paper. \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
   m_sharedMaterial: {fileID: 2341788086263780459, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
@@ -9108,7 +9106,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1342883313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9889,9 +9887,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "This is the operating system. It\u2019s old but still reliable. For some
-    reason, it uses more code that you\u2019ve forgotten how to read. You somehow
-    need to get it up and running."
+  m_text: "Inside the power unit the cables are tangled, solve the puzzle to untangle
+    them. \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
   m_sharedMaterial: {fileID: 2341788086263780459, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
