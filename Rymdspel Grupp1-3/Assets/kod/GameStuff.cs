@@ -4,27 +4,40 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameStuff : MonoBehaviour
 {
+    public AudioSource pop;
     public TextMeshProUGUI livesGUI;
-    public static float timer = 600;
+    public static float timer = 900;
     public static bool puzzle0Done = false;
     public static bool puzzle1Done = false;
     public static bool puzzle2Done = false;
     public static bool puzzle3Done = false;
     public GameObject folder;
     public Image damage;
+    public Image correct;
     public static bool damageFlash = false;
+    public static bool correctFlash = false;
 
+    public GameObject puzzle0overline;
+    public GameObject puzzle1overline;
+    public GameObject puzzle2overline;
+    public GameObject puzzle3overline;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         folder.SetActive(false);
-        timer = 600;
+        timer = 900;
         puzzle0Done = false;
         puzzle1Done = false;
         puzzle2Done = false;
         puzzle3Done = false;
         damageFlash = false;
+        correctFlash = false;
+
+        puzzle0overline.SetActive(false);
+        puzzle1overline.SetActive(false);
+        puzzle2overline.SetActive(false);
+        puzzle3overline.SetActive(false);
     }
 
     // Update is called once per frame
@@ -58,6 +71,27 @@ public class GameStuff : MonoBehaviour
             c.a -= 2f * Time.deltaTime; // minskar alpha
             damage.color = c;
         }
+
+        Color co = correct.color;
+        if (correctFlash)
+        {
+            if (co.a < 1f)
+            {
+                co.a += 2f * Time.deltaTime; // ökar alpha
+                correct.color = co;
+            }
+            if (co.a >= 1f) correctFlash = false;
+        }
+        if (!correctFlash && co.a > 0f)
+        {
+            co.a -= 2f * Time.deltaTime; // minskar alpha
+            correct.color = co;
+        }
+
+        if (puzzle0Done) puzzle0overline.SetActive(true);
+        if (puzzle1Done) puzzle1overline.SetActive(true);
+        if (puzzle2Done) puzzle2overline.SetActive(true);
+        if (puzzle3Done) puzzle3overline.SetActive(true);
     }
 
     public void Open0puzzle(GameObject puzzle)
@@ -83,5 +117,15 @@ public class GameStuff : MonoBehaviour
     public void OpenFolder()
     {
         folder.SetActive(!folder.activeSelf);
+    }
+
+    public void OpenCanva(GameObject canva)
+    {
+        canva.SetActive(!canva.activeSelf);
+    }
+
+    public void PlayPop()
+    {
+        pop.Play();
     }
 }

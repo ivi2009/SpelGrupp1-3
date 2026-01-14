@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pusselkod : MonoBehaviour
 {
+    public AudioSource buzzer;
     public TMP_InputField codeInput;
     public static List<string> codes = new List<string>();
 
@@ -15,7 +16,7 @@ public class Pusselkod : MonoBehaviour
         {
             "shine",
             "moves",
-            "00000",
+            "judge",
             "plant"
         });
     }
@@ -30,16 +31,16 @@ public class Pusselkod : MonoBehaviour
     {
         if (codeInput.text.ToLower() == codes[puzzleID])  //är koden korekt?
         {
-            Debug.Log("rätt");
             gameObject.SetActive(false);
             if (puzzleID == 0) GameStuff.puzzle0Done = true;
             if (puzzleID == 1) GameStuff.puzzle1Done = true;
             if (puzzleID == 2) GameStuff.puzzle2Done = true;
             if (puzzleID == 3) GameStuff.puzzle3Done = true;
+            GameStuff.correctFlash = true;
         }
         else
         {
-            Debug.Log("fel");
+            buzzer.Play();
             GameStuff.timer -= 30f;
             GameStuff.damageFlash = true;
         }
