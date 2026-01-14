@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class GameStuff : MonoBehaviour
 {
+    public AudioSource pop;
     public TextMeshProUGUI livesGUI;
     public static float timer = 900;
     public static bool puzzle0Done = false;
@@ -121,5 +122,10 @@ public class GameStuff : MonoBehaviour
     public void OpenCanva(GameObject canva)
     {
         canva.SetActive(!canva.activeSelf);
+    }
+
+    public void PlayPop()
+    {
+        pop.Play();
     }
 }

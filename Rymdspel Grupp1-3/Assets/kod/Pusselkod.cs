@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pusselkod : MonoBehaviour
 {
+    public AudioSource buzzer;
     public TMP_InputField codeInput;
     public static List<string> codes = new List<string>();
 
@@ -39,6 +40,7 @@ public class Pusselkod : MonoBehaviour
         }
         else
         {
+            buzzer.Play();
             GameStuff.timer -= 30f;
             GameStuff.damageFlash = true;
         }
