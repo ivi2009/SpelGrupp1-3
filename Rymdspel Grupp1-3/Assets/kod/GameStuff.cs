@@ -61,7 +61,6 @@ public class GameStuff : MonoBehaviour
         {
             SceneManager.LoadScene(7);
         }
-        //damage
 
         //damageflash
         Color c = damage.color;
