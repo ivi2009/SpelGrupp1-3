@@ -704,7 +704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &160344834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -721,8 +721,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.266, y: 120}
-  m_SizeDelta: {x: 248.9503, y: 2.2044}
+  m_AnchoredPosition: {x: 5.6063, y: 120}
+  m_SizeDelta: {x: 270.6948, y: 2.2044}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &160344835
 MonoBehaviour:
@@ -5976,8 +5976,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 337.7968, y: -167.86}
-  m_SizeDelta: {x: 76.8064, y: 59.082}
+  m_AnchoredPosition: {x: 331.4127, y: -179.3}
+  m_SizeDelta: {x: 89.5748, y: 68.904}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801749712
 MonoBehaviour:
@@ -9339,8 +9339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -37.3}
-  m_SizeDelta: {x: -220, y: -14}
+  m_AnchoredPosition: {x: -5.681305, y: -37.3}
+  m_SizeDelta: {x: -231.3625, y: -14}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1294474195
 MonoBehaviour:
@@ -9362,7 +9362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Input code to access computer...
+  m_text: Input a five letter code to access  the computer...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
   m_sharedMaterial: {fileID: 2341788086263780459, guid: 494071f58ff87a84ea006c5678eaacda, type: 2}
@@ -9397,7 +9397,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 16
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9427,7 +9427,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -106.09813, y: 23.791702, z: -102.88306, w: 0}
+  m_margin: {x: -106.09813, y: 23.791702, z: -25.71238, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

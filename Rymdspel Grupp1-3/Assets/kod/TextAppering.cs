@@ -15,9 +15,9 @@ public class TextAppering : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime / 2.5f;
+        timer += Time.deltaTime / 2.5f; //ökar timern med delta tid
 
-        if (Mathf.RoundToInt(timer) <= text.Count)
+        if (Mathf.RoundToInt(timer) <= text.Count) //visar text om timern är hög nog
         {
             text[Mathf.RoundToInt(timer)].SetActive(true);
         }

@@ -15,12 +15,12 @@ public class TooltipManager : MonoBehaviour
 
     private void Start()
     {
-        tooltipString = "";
+        tooltipString = ""; //nollar tooltipen (lite onödtid men jaja)
     }
 
     void Update()
     {
-        rectTransform.position = Mouse.current.position.ReadValue();
-        tip.text = tooltipString;
+        rectTransform.position = Mouse.current.position.ReadValue(); //gå till mus pos
+        tip.text = tooltipString; //skriv skit
     }
 }
