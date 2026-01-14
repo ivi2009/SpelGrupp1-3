@@ -163,7 +163,7 @@ ScriptedImporter:
     layerType: 0
     blendMode: 0
     cells:
-    - name: "Elsk\xE5p"
+    - name: "elsk\xE5p"
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
