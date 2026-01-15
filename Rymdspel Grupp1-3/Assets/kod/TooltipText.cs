@@ -5,6 +5,7 @@ public class TooltipText : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 {
     public string displayText;
 
+
     void Start()
     {
 

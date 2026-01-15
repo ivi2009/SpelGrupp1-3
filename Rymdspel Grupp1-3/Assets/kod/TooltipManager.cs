@@ -8,6 +8,7 @@ public class TooltipManager : MonoBehaviour
     public TextMeshProUGUI tip;
     public static string tooltipString = "";
 
+
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -20,8 +21,8 @@ public class TooltipManager : MonoBehaviour
 
     void Update()
     {
-        rectTransform.position = Mouse.current.position.ReadValue(); //gå till mus pos
         tip.text = tooltipString; //skriv skit
+        rectTransform.position = Mouse.current.position.ReadValue(); //gå till mus pos
     }
 }
 

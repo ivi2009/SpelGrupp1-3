@@ -18,6 +18,8 @@ public class GameStuff : MonoBehaviour
     public List<GameObject> overLines = new List<GameObject>();
     public List<GameObject> puzzles = new List<GameObject>();
 
+    float flashTime = 2f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -65,14 +67,14 @@ public class GameStuff : MonoBehaviour
         {
             if (c.a < 1f)
             {
-                c.a += 2f * Time.deltaTime; // öka långsamt alpha på damageflash
+                c.a += flashTime * Time.deltaTime; // öka långsamt alpha på damageflash
                 damage.color = c;
             }
             if (c.a >= 1f) damageFlash = false; //om alphan är max börja minska
         }
         if (!damageFlash && c.a > 0f)
         {
-            c.a -= 2f * Time.deltaTime; // minskar ångsamt alpha på damageflash
+            c.a -= flashTime * Time.deltaTime; // minskar ångsamt alpha på damageflash
             damage.color = c;
         }
 
@@ -82,14 +84,14 @@ public class GameStuff : MonoBehaviour
         {
             if (co.a < 1f)
             {
-                co.a += 2f * Time.deltaTime; //öka långsamt alpha på winflash
+                co.a += flashTime * Time.deltaTime; //öka långsamt alpha på winflash
                 correct.color = co;
             }
             if (co.a >= 1f) correctFlash = false;
         }
         if (!correctFlash && co.a > 0f) //om alphan är max börja minska
         {
-            co.a -= 2f * Time.deltaTime; //minska långsamt alpha på winflash
+            co.a -= flashTime * Time.deltaTime; //minska långsamt alpha på winflash
             correct.color = co;
         }
 
@@ -103,12 +105,12 @@ public class GameStuff : MonoBehaviour
     public void OpenPuzzle(int puzzleID) //kollar om pussel x är ofärdigt och öppnar isåfall det
     {
         bool canOpen = true;
-        for (int i = 0; i < puzzles.Count; i++)
+        for (int i = 0; i < puzzles.Count; i++) // är något annat pussel färdigt?
         {
             if (i == puzzleID) continue;
             if (puzzles[i].activeSelf == true) canOpen = false;
         }
-        if (!DonePuzzles[puzzleID] && canOpen)
+        if (!DonePuzzles[puzzleID] && canOpen) //är pusslet avkalrat?
         {
             puzzles[puzzleID].SetActive(!puzzles[puzzleID].activeSelf);
         }
