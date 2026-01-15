@@ -16,6 +16,7 @@ public class GameStuff : MonoBehaviour
     public static bool damageFlash = false;
     public static bool correctFlash = false;
     public List<GameObject> overLines = new List<GameObject>();
+    public List<GameObject> puzzles = new List<GameObject>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -99,24 +100,18 @@ public class GameStuff : MonoBehaviour
         }
     }
 
-    public void Open0puzzle(GameObject puzzle) //kollar om puzzel 0 är ofärdigt och öppnar isåfall det
+    public void OpenPuzzle(int puzzleID) //kollar om pussel x är ofärdigt och öppnar isåfall det
     {
-        if (!DonePuzzles[0]) puzzle.SetActive(!puzzle.activeSelf);
-    }
-
-    public void Open1puzzle(GameObject puzzle) //kollar om puzzel 1 är ofärdigt och öppnar isåfall det
-    {
-        if (!DonePuzzles[1]) puzzle.SetActive(!puzzle.activeSelf);
-    }
-
-    public void Open2puzzle(GameObject puzzle) //kollar om puzzel 2 är ofärdigt och öppnar isåfall det
-    {
-        if (!DonePuzzles[2]) puzzle.SetActive(!puzzle.activeSelf);
-    }
-
-    public void Open3puzzle(GameObject puzzle) //kollar om puzzel 3 är ofärdigt och öppnar isåfall det
-    {
-        if (!DonePuzzles[3]) puzzle.SetActive(!puzzle.activeSelf);
+        bool canOpen = true;
+        for (int i = 0; i < puzzles.Count; i++)
+        {
+            if (i == puzzleID) continue;
+            if (puzzles[i].activeSelf == true) canOpen = false;
+        }
+        if (!DonePuzzles[puzzleID] && canOpen)
+        {
+            puzzles[puzzleID].SetActive(!puzzles[puzzleID].activeSelf);
+        }
     }
 
     //öppnar foldern
