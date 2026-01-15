@@ -15,11 +15,7 @@ public class GameStuff : MonoBehaviour
     public Image correct;
     public static bool damageFlash = false;
     public static bool correctFlash = false;
-
-    public GameObject puzzle0overline;
-    public GameObject puzzle1overline;
-    public GameObject puzzle2overline;
-    public GameObject puzzle3overline;
+    public List<GameObject> overLines = new List<GameObject>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,10 +27,10 @@ public class GameStuff : MonoBehaviour
         damageFlash = false;
         correctFlash = false;
 
-        puzzle0overline.SetActive(false);
-        puzzle1overline.SetActive(false);
-        puzzle2overline.SetActive(false);
-        puzzle3overline.SetActive(false);
+        for (int i = 0; i < overLines.Count; i++)
+        {
+            overLines[i].SetActive(false);
+        }
 
         DonePuzzles.Clear();
         DonePuzzles.AddRange(new List<bool>
@@ -92,18 +88,17 @@ public class GameStuff : MonoBehaviour
         }
         if (!correctFlash && co.a > 0f) //om alphan är max börja minska
         {
-            co.a -= 2f * Time.deltaTime; //öka långsamt alpha på winflash
+            co.a -= 2f * Time.deltaTime; //minska långsamt alpha på winflash
             correct.color = co;
         }
 
         //är något puzzel färdigt? dra då ett strek över det i foldern
-        if (DonePuzzles[0]) puzzle0overline.SetActive(true);
-        if (DonePuzzles[1]) puzzle1overline.SetActive(true);
-        if (DonePuzzles[2]) puzzle2overline.SetActive(true);
-        if (DonePuzzles[3]) puzzle3overline.SetActive(true);
+        for (int i = 0; i < overLines.Count; i++)
+        {
+            if (DonePuzzles[i]) overLines[i].SetActive(true);
+        }
     }
 
-    //de fyra följande funktonerna är ass, men man kan bara ha en variabel när man kallar en funktion från en knapp
     public void Open0puzzle(GameObject puzzle) //kollar om puzzel 0 är ofärdigt och öppnar isåfall det
     {
         if (!DonePuzzles[0]) puzzle.SetActive(!puzzle.activeSelf);
