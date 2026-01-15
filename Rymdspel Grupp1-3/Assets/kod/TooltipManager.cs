@@ -15,7 +15,7 @@ public class TooltipManager : MonoBehaviour
 
     private void Start()
     {
-        tooltipString = ""; //nollar tooltipen (lite onödtid men jaja)
+        tooltipString = ""; //nollar tooltipen
     }
 
     void Update()
@@ -24,3 +24,4 @@ public class TooltipManager : MonoBehaviour
         tip.text = tooltipString; //skriv skit
     }
 }
+

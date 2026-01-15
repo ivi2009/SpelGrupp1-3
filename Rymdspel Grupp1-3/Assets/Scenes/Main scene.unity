@@ -1567,7 +1567,7 @@ GameObject:
   - component: {fileID: 247279223}
   - component: {fileID: 247279226}
   m_Layer: 5
-  m_Name: ButtonToPuzzle2
+  m_Name: ButtonToPuzzle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4152,7 +4152,7 @@ GameObject:
   - component: {fileID: 610460830}
   - component: {fileID: 610460833}
   m_Layer: 5
-  m_Name: ButtonToPuzzle3
+  m_Name: ButtonToPuzzle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5021,7 +5021,7 @@ GameObject:
   - component: {fileID: 740103078}
   - component: {fileID: 740103081}
   m_Layer: 5
-  m_Name: ButtonToPuzzle1
+  m_Name: ButtonToPuzzle0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5955,7 +5955,7 @@ GameObject:
   - component: {fileID: 801749713}
   - component: {fileID: 801749712}
   m_Layer: 5
-  m_Name: Folder
+  m_Name: Folder(Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5977,8 +5977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 331.4127, y: -179.3}
-  m_SizeDelta: {x: 89.5748, y: 68.904}
+  m_AnchoredPosition: {x: 326.3, y: -174.4}
+  m_SizeDelta: {x: 100.9158, y: 77.6279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &801749712
 MonoBehaviour:
@@ -9102,7 +9102,7 @@ GameObject:
   - component: {fileID: 1274223497}
   - component: {fileID: 1274223502}
   m_Layer: 5
-  m_Name: Puzzle1
+  m_Name: Puzzle0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9509,7 +9509,7 @@ GameObject:
   - component: {fileID: 1342883313}
   - component: {fileID: 1342883318}
   m_Layer: 5
-  m_Name: Puzzle4
+  m_Name: Puzzle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10623,7 +10623,7 @@ GameObject:
   - component: {fileID: 1468392052}
   - component: {fileID: 1468392055}
   m_Layer: 5
-  m_Name: ButtonToPuzzle4
+  m_Name: ButtonToPuzzle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12315,7 +12315,7 @@ GameObject:
   - component: {fileID: 1798324972}
   - component: {fileID: 1798324977}
   m_Layer: 5
-  m_Name: Puzzle2
+  m_Name: Puzzle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13448,7 +13448,7 @@ GameObject:
   - component: {fileID: 2061646910}
   - component: {fileID: 2061646915}
   m_Layer: 5
-  m_Name: Puzzle3
+  m_Name: Puzzle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
