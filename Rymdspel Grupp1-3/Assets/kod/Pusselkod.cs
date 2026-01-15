@@ -12,7 +12,7 @@ public class Pusselkod : MonoBehaviour
     void Start()
     {
         codes.Clear();
-        codes.AddRange(new List<string>
+        codes.AddRange(new List<string> //rätta svaren
         {
             "shine",
             "moves",
@@ -31,22 +31,20 @@ public class Pusselkod : MonoBehaviour
     {
         if (codeInput.text.ToLower() == codes[puzzleID])  //är koden korekt?
         {
-            gameObject.SetActive(false);
-            if (puzzleID == 0) GameStuff.puzzle0Done = true;
-            if (puzzleID == 1) GameStuff.puzzle1Done = true;
-            if (puzzleID == 2) GameStuff.puzzle2Done = true;
-            if (puzzleID == 3) GameStuff.puzzle3Done = true;
+            gameObject.SetActive(false);    //om ja, stäng menyn mm
+            GameStuff.DonePuzzles[puzzleID] = true;
+
             GameStuff.correctFlash = true;
         }
         else
         {
-            buzzer.Play();
+            buzzer.Play();          //om nej, ta bort från timern mm
             GameStuff.timer -= 30f;
             GameStuff.damageFlash = true;
         }
     }
 
-    public void CloseCanvas()
+    public void CloseCanvas() //sänger valfri canvas (när man trycker på "back")
     {
         gameObject.SetActive(false);
     }

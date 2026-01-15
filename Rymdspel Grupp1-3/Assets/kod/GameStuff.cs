@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,123 +8,130 @@ public class GameStuff : MonoBehaviour
     public AudioSource pop;
     public TextMeshProUGUI livesGUI;
     public static float timer = 900;
-    public static bool puzzle0Done = false;
-    public static bool puzzle1Done = false;
-    public static bool puzzle2Done = false;
-    public static bool puzzle3Done = false;
+
+    public static List<bool> DonePuzzles = new List<bool>();
     public GameObject folder;
     public Image damage;
     public Image correct;
     public static bool damageFlash = false;
     public static bool correctFlash = false;
-
-    public GameObject puzzle0overline;
-    public GameObject puzzle1overline;
-    public GameObject puzzle2overline;
-    public GameObject puzzle3overline;
+    public List<GameObject> overLines = new List<GameObject>();
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //alla public variablar resättas
         folder.SetActive(false);
         timer = 900;
-        puzzle0Done = false;
-        puzzle1Done = false;
-        puzzle2Done = false;
-        puzzle3Done = false;
+
         damageFlash = false;
         correctFlash = false;
 
-        puzzle0overline.SetActive(false);
-        puzzle1overline.SetActive(false);
-        puzzle2overline.SetActive(false);
-        puzzle3overline.SetActive(false);
+        for (int i = 0; i < overLines.Count; i++)
+        {
+            overLines[i].SetActive(false);
+        }
+
+        DonePuzzles.Clear();
+        DonePuzzles.AddRange(new List<bool>
+        {
+            false, false, false, false
+        });
     }
 
     // Update is called once per frame
     void Update()
     {
+        //timer
         livesGUI.text = Mathf.RoundToInt(timer).ToString();
         timer -= Time.deltaTime;
+
+        //är timern noll? isåfall förlora
         if (timer <= 0)
         {
-            SceneManager.LoadScene("Game Over");
+            SceneManager.LoadScene(6);
         }
 
-        if (puzzle0Done && puzzle1Done && puzzle2Done && puzzle3Done)
+        //är pusslerna fördiga? isåfall vinn
+        if (DonePuzzles[0] && DonePuzzles[1] && DonePuzzles[2] && DonePuzzles[3])
         {
-            SceneManager.LoadScene("Win screen");
+            SceneManager.LoadScene(7);
         }
-        //damage
 
+        //damageflash
         Color c = damage.color;
         if (damageFlash)
         {
             if (c.a < 1f)
             {
-                c.a += 2f * Time.deltaTime; // ökar alpha
+                c.a += 2f * Time.deltaTime; // öka långsamt alpha på damageflash
                 damage.color = c;
             }
-            if (c.a >= 1f) damageFlash = false;
+            if (c.a >= 1f) damageFlash = false; //om alphan är max börja minska
         }
         if (!damageFlash && c.a > 0f)
         {
-            c.a -= 2f * Time.deltaTime; // minskar alpha
+            c.a -= 2f * Time.deltaTime; // minskar ångsamt alpha på damageflash
             damage.color = c;
         }
 
+        //winflash (grön fan, som kommer upp när man har rätt)
         Color co = correct.color;
         if (correctFlash)
         {
             if (co.a < 1f)
             {
-                co.a += 2f * Time.deltaTime; // ökar alpha
+                co.a += 2f * Time.deltaTime; //öka långsamt alpha på winflash
                 correct.color = co;
             }
             if (co.a >= 1f) correctFlash = false;
         }
-        if (!correctFlash && co.a > 0f)
+        if (!correctFlash && co.a > 0f) //om alphan är max börja minska
         {
-            co.a -= 2f * Time.deltaTime; // minskar alpha
+            co.a -= 2f * Time.deltaTime; //minska långsamt alpha på winflash
             correct.color = co;
         }
 
-        if (puzzle0Done) puzzle0overline.SetActive(true);
-        if (puzzle1Done) puzzle1overline.SetActive(true);
-        if (puzzle2Done) puzzle2overline.SetActive(true);
-        if (puzzle3Done) puzzle3overline.SetActive(true);
+        //är något puzzel färdigt? dra då ett strek över det i foldern
+        for (int i = 0; i < overLines.Count; i++)
+        {
+            if (DonePuzzles[i]) overLines[i].SetActive(true);
+        }
     }
 
-    public void Open0puzzle(GameObject puzzle)
+    public void Open0puzzle(GameObject puzzle) //kollar om puzzel 0 är ofärdigt och öppnar isåfall det
     {
-        if (!puzzle0Done) puzzle.SetActive(!puzzle.activeSelf);
+        if (!DonePuzzles[0]) puzzle.SetActive(!puzzle.activeSelf);
     }
 
-    public void Open1puzzle(GameObject puzzle)
+    public void Open1puzzle(GameObject puzzle) //kollar om puzzel 1 är ofärdigt och öppnar isåfall det
     {
-        if (!puzzle1Done) puzzle.SetActive(!puzzle.activeSelf);
+        if (!DonePuzzles[1]) puzzle.SetActive(!puzzle.activeSelf);
     }
 
-    public void Open2puzzle(GameObject puzzle)
+    public void Open2puzzle(GameObject puzzle) //kollar om puzzel 2 är ofärdigt och öppnar isåfall det
     {
-        if (!puzzle2Done) puzzle.SetActive(!puzzle.activeSelf);
+        if (!DonePuzzles[2]) puzzle.SetActive(!puzzle.activeSelf);
     }
 
-    public void Open3puzzle(GameObject puzzle)
+    public void Open3puzzle(GameObject puzzle) //kollar om puzzel 3 är ofärdigt och öppnar isåfall det
     {
-        if (!puzzle3Done) puzzle.SetActive(!puzzle.activeSelf);
+        if (!DonePuzzles[3]) puzzle.SetActive(!puzzle.activeSelf);
     }
 
+    //öppnar foldern
     public void OpenFolder()
     {
         folder.SetActive(!folder.activeSelf);
     }
 
+    // öppnar/stänger pussel
     public void OpenCanva(GameObject canva)
     {
         canva.SetActive(!canva.activeSelf);
     }
 
+    //spelar ljud-effect
     public void PlayPop()
     {
         pop.Play();

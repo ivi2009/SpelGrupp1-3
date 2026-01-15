@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Story.unity
     guid: a468437fa74387841843c262b012246b
+  - enabled: 1
+    path: Assets/Scenes/Story Bad ending.unity
+    guid: 8cdc442ac8f7d194182ac3e370814a41
+  - enabled: 1
+    path: Assets/Scenes/Story goodending.unity
+    guid: cc89829b6df688347b4a24e7c43839aa
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

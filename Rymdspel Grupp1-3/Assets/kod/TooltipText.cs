@@ -12,11 +12,11 @@ public class TooltipText : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        TooltipManager.tooltipString = displayText;
+        TooltipManager.tooltipString = displayText; //om musen hovrar över kapp, skriv sak
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        TooltipManager.tooltipString = "";
+        TooltipManager.tooltipString = ""; //om musen inte hovrar över kanpp, sluta
     }
 }
