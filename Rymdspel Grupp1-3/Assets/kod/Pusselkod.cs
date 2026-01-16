@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pusselkod : MonoBehaviour
 {
     public AudioSource buzzer;
+    public AudioSource correct;
     public TMP_InputField codeInput;
     public static List<string> codes = new List<string>();
 
@@ -35,6 +36,7 @@ public class Pusselkod : MonoBehaviour
             GameStuff.DonePuzzles[puzzleID] = true;
 
             GameStuff.correctFlash = true;
+            correct.Play();
         }
         else
         {
