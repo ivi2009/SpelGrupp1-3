@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameStuff : MonoBehaviour
 {
     public AudioSource pop;
+    public AudioSource alarm;
     public TextMeshProUGUI livesGUI;
     public static float timer = 900;
 
@@ -49,15 +50,22 @@ public class GameStuff : MonoBehaviour
         livesGUI.text = Mathf.RoundToInt(timer).ToString();
         timer -= Time.deltaTime;
 
+        //är timern < 20? spela alarm
+        if (timer < 20 && !alarm.isPlaying)
+        {
+            alarm.Play();
+        }
         //är timern noll? isåfall förlora
         if (timer <= 0)
         {
+            alarm.Stop();
             SceneManager.LoadScene(6);
         }
 
         //är pusslerna fördiga? isåfall vinn
         if (DonePuzzles[0] && DonePuzzles[1] && DonePuzzles[2] && DonePuzzles[3])
         {
+            if (alarm.isPlaying) alarm.Stop();
             SceneManager.LoadScene(7);
         }
 
